@@ -22,6 +22,9 @@ class Dev(Configuration):
     BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+    AUTH_USER_MODEL = "blango_auth.User"
+
+
     # Quick-start development settings - unsuitable for production
     # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
@@ -54,6 +57,7 @@ class Dev(Configuration):
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+        'blango_auth',
         'blog',
         "debug_toolbar",
     ]
