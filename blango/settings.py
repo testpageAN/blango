@@ -59,6 +59,7 @@ class Dev(Configuration):
     # Application definition
 
     INSTALLED_APPS = [
+        'rest_framework',
         'crispy_forms',
         'crispy_bootstrap5',
         'django.contrib.admin',
