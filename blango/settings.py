@@ -59,6 +59,7 @@ class Dev(Configuration):
     # Application definition
 
     INSTALLED_APPS = [
+        'rest_framework.authtoken',
         'rest_framework',
         'crispy_forms',
         'crispy_bootstrap5',
@@ -165,6 +166,15 @@ class Dev(Configuration):
 #     'django.contrib.auth.hashers.Argon2PasswordHasher',
 #     'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
 # ]
+
+
+    REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework.authentication.BasicAuthentication",
+        "rest_framework.authentication.SessionAuthentication",
+        "rest_framework.authentication.TokenAuthentication",
+    ]
+}
 
 
     # Internationalization
