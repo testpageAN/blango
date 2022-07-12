@@ -59,6 +59,7 @@ class Dev(Configuration):
     # Application definition
 
     INSTALLED_APPS = [
+        'drf_yasg',
         'rest_framework.authtoken',
         'rest_framework',
         'crispy_forms',
@@ -178,6 +179,13 @@ class Dev(Configuration):
         "rest_framework.permissions.IsAuthenticatedOrReadOnly"
     ],
 }
+
+    SWAGGER_SETTINGS = {
+        "SECURITY_DEFINITIONS": {
+            "Token": {"type": "apiKey", "name": "Authorization", "in": "header"},
+            "Basic": {"type": "basic"},
+        }
+    }    
 
 
     # Internationalization
