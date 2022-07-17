@@ -61,8 +61,12 @@ class Dev(Configuration):
         "REFRESH_TOKEN_LIFETIME": timedelta(days=7),
     }
 
+    MEDIA_ROOT = BASE_DIR / "media"
+    MEDIA_URL = "/media/"   
+
     # Application definition
     INSTALLED_APPS = [
+        'versatileimagefield',
         'django_filters',
         'drf_yasg',
         'rest_framework.authtoken',
